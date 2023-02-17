@@ -21,14 +21,18 @@ public class playermovement : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        InvokeRepeating("ScoreCount",1f,1f);
         trans = GetComponent<Transform>();
         body = GetComponent<Rigidbody>();
     }
-
+    void ScoreCount()
+    {
+        score.scoresScriptInstance.scoreNumber++;
+    }
     // Update is called once per frame
     void Update()
     {
-
+        
     }
     void FixedUpdate()
     {
